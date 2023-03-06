@@ -17,6 +17,10 @@ public class Main {
     private static void exercise1() {
         System.out.println("Exercise 1:");
         // Write your code here
+        double value = 555;
+        double valueSquareRoot = Math.sqrt(value);
+
+        System.out.println("Value: " + value + ". Square root of value: " + valueSquareRoot);
     }
 
     /**
@@ -33,8 +37,8 @@ public class Main {
         int valueA = 5;
         int valueB = 10;
 
-        System.out.println("Max=");
-        System.out.println("Min=");
+        System.out.println("Max= " + Math.max(valueA, valueB));
+        System.out.println("Min= " + Math.min(valueA, valueB));
 
         // Write your code here
     }
@@ -48,7 +52,8 @@ public class Main {
         int totalMoney = 50;
         int costPerBurger = 9;
         // Write your code here
-        System.out.println("Remainder=");
+        System.out.println("Numbers of burgers bought= " + totalMoney / costPerBurger);
+        System.out.println("Remainder= " + totalMoney % costPerBurger);
     }
 
     /**
@@ -65,17 +70,17 @@ public class Main {
 
         double ourValue = 4.5;
 
-        // Replace with your comment 1
+        // Arrotonda il numero per eccesso
         System.out.println(ourValue + " after using ceiling=" + Math.ceil(ourValue));
-        // Replace with your comment 2
+        // Arrotonda il numero per difetto
         System.out.println(ourValue + " after using floor=" + Math.floor(ourValue));
-        // Replace with your comment 3
+        // Arrotonda un numero e dà un intero
         System.out.println(ourValue + " after using round=" + Math.round(ourValue));
-        // Replace with your comment 4
+        // potenza di value per 2
         System.out.println(ourValue + " after using powerOf with the value of 2=" + Math.pow(ourValue, 2));
-        // Replace with your comment 5
+        // potenza di value per 3
         System.out.println(ourValue + " after using powerOf with the value of 3=" + Math.pow(ourValue, 3));
-        // Replace with your comment 6
+        // Moltiplica un numero casuale con ourValue
         System.out.println(ourValue + " times random =" + Math.random() * ourValue);
     }
 }

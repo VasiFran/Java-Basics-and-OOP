@@ -15,7 +15,7 @@ public class Main {
         System.out.println("Exercise 1:");
         // Write your code here
         System.out.print('F');
-        System.out.print('V');
+        System.out.println('V');
     }
 
     /**
@@ -47,8 +47,11 @@ public class Main {
         boolean hadLunch = true;
         double myLunchMoney = 3.95;
 
+        System.out.print("My age is: ");
         System.out.println(age);
+        System.out.print("Did I have lunch today? ");
         System.out.println(hadLunch);
+        System.out.print("The money in my wallet is ");
         System.out.println(myLunchMoney);
     }
 }
