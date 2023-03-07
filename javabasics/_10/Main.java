@@ -31,6 +31,14 @@ public class Main {
         boolean wearingShorts = true;
 
         // Write your code here
+
+        if ((isWarm && wearingShorts) || (!isWarm && !wearingShorts)){
+            System.out.println("Comfortable clothes");
+        } else {
+            System.out.println("Uncomfortable clothes");
+        }
+
+
     }
 
     /**
@@ -46,13 +54,17 @@ public class Main {
         System.out.println("\nExercise 2 - Club Bouncer:");
         String shoeType = "fancy";
 
-
-
         int age = 30;
         double eurosInPocket = 7.5;
         double eurosForEntry = 10;
 
         // Write your code here
+        if(age >= 18 && eurosInPocket > eurosForEntry && "fancy".equals(shoeType)){
+            System.out.println("Come in");
+        } else {
+            System.out.println("Stay out");
+        }
+
     }
 
     /**
@@ -74,6 +86,33 @@ public class Main {
         double maxTestScore = 10;
         boolean isTestRetry = true;
         //Write your code here
+        double testIn100 = (ourTestScore * 100) / 10;
+
+        if (isTestRetry == false) {
+
+
+            if (testIn100 >= 90) {
+                System.out.println('A');
+            } else if (testIn100 >= 80) {
+                System.out.println('B');
+            } else if (testIn100 >= 70) {
+                System.out.println('C');
+            } else if (testIn100 >= 60) {
+                System.out.println('D');
+            } else {
+                System.out.println('F');
+            }
+        } else {
+            if (testIn100 >= 70) {
+                System.out.println('C');
+            } else if (testIn100 >= 60) {
+                System.out.println('D');
+            } else {
+                System.out.println('F');
+            }
+
+        }
+        // Probabilmente c'è un modo migliore per farlo, ci penserò in seguito
     }
 
 
@@ -91,5 +130,11 @@ public class Main {
         boolean carIsDrivingFromRightToLeft = false;
 
         //Write your code here
+
+        if (carIsDrivingFromLeftToRight ^ carIsDrivingFromRightToLeft){
+            System.out.println("Safe");
+        } else {
+            System.out.println("CRASH! or no cars");
+        }
     }
 }
