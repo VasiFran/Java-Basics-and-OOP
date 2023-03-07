@@ -14,7 +14,7 @@ public class Main {
      */
     private static void exercise1() {
         System.out.println("\nExercise 1:");
-        int porridgeHeatInCentigrade = 30; // <--- Change this value
+        int porridgeHeatInCentigrade = 60; // <--- Change this value
 
         if (porridgeHeatInCentigrade < 60) {
             System.out.println("Too cold!");
@@ -25,7 +25,7 @@ public class Main {
         }
     }
 
-     /**
+    /**
      * 2: Write an if statement that checks if we can afford lunch with the 2 variables, 'remainingMoney' and 'lunchCost'
      *
      *    Print: "Lunch time!" if you can afford lunch, if lunchCost is less than remainingMoney
@@ -39,6 +39,20 @@ public class Main {
         double lunchCost = 5.0;
 
         // Your if statement here
+        if(remainingMoney >= lunchCost){
+            System.out.println("Lunch Time!");
+        } else {
+            System.out.println("You go hungry today...");
+        }
+
+        remainingMoney = 3.5;
+
+        if(remainingMoney >= lunchCost){
+            System.out.println("Lunch Time!");
+        } else {
+            System.out.println("You go hungry today...");
+        }
+
     }
 
     /**
@@ -57,6 +71,43 @@ public class Main {
         System.out.println("\nExercise 3:");
         double ourDouble = 3.5;
         //Write your code here
+        if(ourDouble > 2.5){
+            System.out.println("Greater than");
+        } else {
+            ourDouble += 1.0;
+            if(ourDouble > 2.5){
+                System.out.println("Now greater than");
+            } else {
+                System.out.println("Still less than");
+            }
+        }
+
+        ourDouble = 1.0;
+
+        if(ourDouble > 2.5){
+            System.out.println("Greater than");
+        } else {
+            ourDouble += 1.0;
+            if(ourDouble > 2.5){
+                System.out.println("Now greater than");
+            } else {
+                System.out.println("Still less than");
+            }
+        }
+
+        //Now "ourDouble" is= 2.0
+
+        if(ourDouble > 2.5){
+            System.out.println("Greater than");
+        } else {
+            ourDouble += 1.0;
+            if(ourDouble > 2.5){
+                System.out.println("Now greater than");
+            } else {
+                System.out.println("Still less than");
+            }
+        }
+
     }
 
 
@@ -77,5 +128,50 @@ public class Main {
         int employeeAge = 30;
 
         //Write your if statement here
+        if(employeeAge >= 65){
+            System.out.println("Retired");
+        } else if (employeeAge >= 35){
+            System.out.println("Experienced Worker");
+        } else if (employeeAge >= 18){
+            System.out.println("New Worker");
+        } else {
+            System.out.println("School age");
+        }
+
+        employeeAge = 70;
+
+        if(employeeAge >= 65){
+            System.out.println("Retired");
+        } else if (employeeAge >= 35){
+            System.out.println("Experienced Worker");
+        } else if (employeeAge >= 18){
+            System.out.println("New Worker");
+        } else {
+            System.out.println("School age");
+        }
+
+        employeeAge = 35;
+
+        if(employeeAge >= 65){
+            System.out.println("Retired");
+        } else if (employeeAge >= 35){
+            System.out.println("Experienced Worker");
+        } else if (employeeAge >= 18){
+            System.out.println("New Worker");
+        } else {
+            System.out.println("School age");
+        }
+
+        employeeAge = 12;
+        if(employeeAge >= 65){
+            System.out.println("Retired");
+        } else if (employeeAge >= 35){
+            System.out.println("Experienced Worker");
+        } else if (employeeAge >= 18){
+            System.out.println("New Worker");
+        } else {
+            System.out.println("School age");
+        }
+
     }
 }
