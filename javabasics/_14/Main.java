@@ -8,6 +8,8 @@ public class Main {
         exercise1();
         exercise2();
         exercise3();
+        exercise4();
+        exercise5();
     }
 
     /**
@@ -26,17 +28,31 @@ public class Main {
         int sumForA = 0;
 
         // Write your code for 1a here
+        for (Integer itemA : itemsA) {
+            sumForA += itemA;
+        }
+
+        System.out.println(sumForA);
+
         System.out.println("\nExercise 1b:");
         int[] itemsB = new int[]{1, 56, 23};
 
         int sumForB = 0;
 
         // Write your code for 1b here
+        for (int itemB : itemsB) {
+            sumForB += itemB;
+        }
+        System.out.println(sumForB);
+
         System.out.println("\nExercise 1c:");
 
         int sumForC = 0;
 
         // Write your code for 1c here, refer back to the lesson to check the fori syntax
+        for (int i = 0; i < itemsA.size(); i++) {
+            sumForC += itemsA.get(i);
+        }
 
         if (sumForA != sumForB || sumForB != sumForC) {
             System.out.println("Failed, sums are different!");
@@ -50,22 +66,34 @@ public class Main {
      * using a for each loop and an if statement/Math.min
      */
     private static void exercise2() {
+        System.out.println("\nExercise 2:");
         List<Integer> items = Arrays.asList(300, 23, 56, 55, 84);
         int minNumber = Integer.MAX_VALUE;
         int maxNumber = 0;
 
         // Write code here
+        for (Integer item : items) {
+            if(minNumber > item) {
+                minNumber = item;
+            }
+        }
+
+        for(Integer item : items ){
+            maxNumber = Math.max(maxNumber, item);
+        }
+        System.out.println("The largest number is: "+ maxNumber + ", the lowest is: " + minNumber);
     }
 
     /**
      * 3: Edit the fori loop below so it only prints the first 2 names.
      */
     private static void exercise3() {
+        System.out.println("\nExercise 3:");
         List<String> names = Arrays.asList("Alan", "Alice", "Antonio", "Aziz");
 
         for (
                 int index = 0;
-                index < names.size(); // <---- Edit this line
+                index < 2; // <---- Edit this line
                 index = index + 1
         ) {
             System.out.println(names.get(index));
@@ -83,10 +111,11 @@ public class Main {
      * </a>
      */
     private static void exercise4() {
+        System.out.println("\nExercise 4:");
         for (
-                int timesTableCurrentValue = 5; // <---- Edit this line
-                timesTableCurrentValue <= 50; // <---- Edit this line
-                timesTableCurrentValue = timesTableCurrentValue + 5 // <---- Edit this line
+                int timesTableCurrentValue = 8; // <---- Edit this line
+                timesTableCurrentValue <= 80; // <---- Edit this line
+                timesTableCurrentValue = timesTableCurrentValue + 8 // <---- Edit this line
         ) {
             System.out.println(timesTableCurrentValue);
         }
@@ -105,6 +134,10 @@ public class Main {
     private static void exercise5() {
         for (int timesTableNumber = 1; timesTableNumber <= 10; timesTableNumber++) {
             // Your fori loop here
+            for(int tableCurrentNumber = timesTableNumber; tableCurrentNumber <= (timesTableNumber*10); tableCurrentNumber += timesTableNumber){
+                System.out.print(tableCurrentNumber + " ");
+            }
+            System.out.println("\n"); // più facile leggerlo così
         }
     }
 }
