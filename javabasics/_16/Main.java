@@ -26,8 +26,14 @@ public class Main {
         String conversionDescription = celsius + " Celsius is " + fahrenheit + " fahrenheit";
         // End
         System.out.println(conversionDescription);
-    }
 
+        System.out.println(celsiusToFahrenheitCoversion(30));
+    }
+    static String celsiusToFahrenheitCoversion(double celsius){
+        double fahrenheit = ((celsius * 9) / 5) + 32;
+        return celsius + " Celsius is " + fahrenheit + " fahrenheit";
+
+    }
     /**
      * 2: Create a function that processes and prints out all the names in the ArrayList
      *
@@ -39,10 +45,18 @@ public class Main {
     private static void exercise2() {
         System.out.println("\nExercise 2:");
         List<String> names = Arrays.asList("Alan   ", "Alice   ", "Ant0ni0   ", "  Aziz");
-
         for (String name : names) {
             // Call your function
+            System.out.println(nameCheck(name));
         }
+    }
+    static String nameCheck (String name){
+            if(name.contains("0") || name.contains("1") || name.contains("2") || name.contains("3") || name.contains("4") ||
+                    name.contains("5") || name.contains("6") || name.contains("7") || name.contains("8") || name.contains("9")){
+                return "Invalid";
+            } else {
+                return name.toUpperCase().trim();
+            }
     }
 
     /**
@@ -57,5 +71,10 @@ public class Main {
         int weightInGrams = 500;
 
         // Call your function
+        menuPrint(myLunchPrice,lunchType,description,weightInGrams);
+    }
+
+    static void menuPrint (double price, String lunch, String description, int weight){
+        System.out.println("Meal:" + lunch + "\nDescription: " + description + "\nPrice: " + price + "\nWeight: " + weight);
     }
 }

@@ -1,6 +1,12 @@
 package javabasics._17;
 
+package exercise_test;
+
+import java.time.LocalDate;
+
+
 public class Main {
+
     public static void main(String[] args) {
         exercise1();
         exercise3();
@@ -12,7 +18,7 @@ public class Main {
      */
     private static void exercise1() {
         System.out.println("Exercise 1: ");
-        int myBankBalanceEuro = 500;
+        long myBankBalanceEuro = 500;
 
         String suspiciousEmailMessage =
                 """
@@ -27,6 +33,10 @@ public class Main {
         long questionableFundsEuro = 5_000_000_000l;
 
         //Add the questionable funds to your bank balance and print it out!
+
+        myBankBalanceEuro += questionableFundsEuro;
+        System.out.println("Your balance is: " + myBankBalanceEuro + "€");
+
     }
 
     /**
@@ -40,12 +50,12 @@ public class Main {
      *    short = -32,768 to 32,768
      *    byte = -127 to 127
      *
-     *    2a: Someone's age
-     *    2b: The age of a baby in months
-     *    2c: Money in a hedgefund in euros
-     *    2d: Price of a good in euros on amazon.com
-     *    2e: The exact weight of an apple measured by scientific equipment
-     *    2f: The number of kilometers from any 2 places in the world
+     *    2a: Someone's age : BYTE
+     *    2b: The age of a baby in months : SHORT
+     *    2c: Money in a hedgefund in euros : LONG
+     *    2d: Price of a good in euros on amazon.com : FLOAT
+     *    2e: The exact weight of an apple measured by scientific equipment : DOUBLE
+     *    2f: The number of kilometers from any 2 places in the world : INT
      */
 
     /**
@@ -63,5 +73,15 @@ public class Main {
      */
     public static void exercise3() {
         System.out.println("Exercise 3:");
+
+        LocalDate myDate = LocalDate.now();
+        System.out.println(myDate);
+        System.out.println(myDate.getDayOfMonth());
+        System.out.println(myDate.getDayOfWeek());
+        System.out.println(myDate.getDayOfYear());
+        System.out.println(myDate.getMonth());
+        System.out.println(myDate.getMonthValue());
+        System.out.println(myDate.isBefore(LocalDate.of(2023, 12,10)));
+        System.out.println(myDate.isAfter(LocalDate.of(1993,12,10)));
     }
 }
