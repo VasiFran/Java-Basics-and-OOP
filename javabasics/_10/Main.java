@@ -86,24 +86,13 @@ public class Main {
         double maxTestScore = 10;
         boolean isTestRetry = true;
         //Write your code here
-        double testIn100 = (ourTestScore * 100) / 10;
+        double testIn100 = (ourTestScore * maxTextScore) / 10;
 
-        if (isTestRetry == false) {
-
-
-            if (testIn100 >= 90) {
+            if (testIn100 >= 90 && !isTestRetry) {
                 System.out.println('A');
-            } else if (testIn100 >= 80) {
+            } else if (testIn100 >= 80 && !isTestRetry) {
                 System.out.println('B');
             } else if (testIn100 >= 70) {
-                System.out.println('C');
-            } else if (testIn100 >= 60) {
-                System.out.println('D');
-            } else {
-                System.out.println('F');
-            }
-        } else {
-            if (testIn100 >= 70) {
                 System.out.println('C');
             } else if (testIn100 >= 60) {
                 System.out.println('D');
