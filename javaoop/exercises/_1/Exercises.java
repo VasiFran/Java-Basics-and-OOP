@@ -6,6 +6,7 @@ import java.util.List;
 public class Exercises {
     public static void main(String[] args) {
         exercise2();
+        exercise3();
     }
 
     /**
@@ -33,12 +34,19 @@ public class Exercises {
         List<Integer> studentAges = Arrays.asList(23, 31, 38);
 
         // Use a for i loop
+        for (int i = 0; i < studentAges.size(); i++) {
+            Student student = createNewStudent(studentNames.get(i),studentAges.get(i));
+            System.out.println("Name: " + student.name + " | Age: " + student.age);
+        }
+
+
     }
 
     private static Student createNewStudent(String name, Integer age) {
         Student student = new Student();
-
         // Write your code here
+        student.name = name;
+        student.age = age;
 
         return student;
     }
@@ -60,5 +68,21 @@ public class Exercises {
         System.out.println("\nExercise 3:");
 
         // Write your code here
+        Course class1 = new Course();
+        List<String> studentNames = Arrays.asList("Alice", "Aragon", "Alex");
+        List<Integer> studentAges = Arrays.asList(23, 31, 38);
+
+        for (int i = 0; i < studentAges.size(); i++) {
+            Student student = createNewStudent(studentNames.get(i),studentAges.get(i));
+            class1.students.add(student);
+        }
+
+        double ageAvg = 0;
+        for (int i = 0; i < class1.students.size(); i++){
+            ageAvg += class1.students.get(i).age;
+        }
+
+        ageAvg /= class1.students.size();
+        System.out.println("The avarage age of the class is: " + ageAvg);
     }
 }
