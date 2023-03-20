@@ -28,7 +28,15 @@ public class Exercises {
 
         for (int i = 0; i < studentAges.size(); i++) {
             // Write create students
+            Student class1Student = new Student(studentNames.get(i), studentAges.get(i));
+            students.add(class1Student);
+
         }
+        for ( Student studentInList : students
+             ) {
+            System.out.println("Name: " + studentInList.name + " | Age: "+ studentInList.age);
+        }
+
     }
 
     /**
@@ -42,12 +50,12 @@ public class Exercises {
     private static void exercise2() {
         System.out.println("\nExercise 2:");
 
-        // Once you've added the correct constructors uncomment the code below, there should be errors!
-//         List<Student> students = Arrays.asList(
-//         new Student("Alice", 33),
-//         new Student("Bob"),
-//         new Student(33),
-//         new Student()
-//        );
+         //Once you've added the correct constructors uncomment the code below, there should be errors!
+         List<Student> students = Arrays.asList(
+         new Student("Alice", 33),
+         new Student("Bob"),
+         new Student(33),
+         new Student()
+        );
     }
 }
