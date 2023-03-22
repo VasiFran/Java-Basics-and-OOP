@@ -19,7 +19,21 @@ public class Exercises {
     private static void exercise1() {
         System.out.println("Exercise 1:");
 
+        Student student1 = new Student();
         // Write and use your 5 getters and setters!
+
+        student1.setName("Antonio");
+        student1.setAge(16);
+        student1.setClassAttended("Math");
+        student1.setGrade(72.5);
+        student1.setHoursMissed(4);
+
+        System.out.println(student1.getName());
+        System.out.println(student1.getAge());
+        System.out.println(student1.getClassAttended());
+        System.out.println(student1.getGrade());
+        System.out.println(student1.getHoursMissed());
+        System.out.println(student1.getFullInfo());
     }
 
     /**
@@ -36,6 +50,14 @@ public class Exercises {
         System.out.println("\nExercise 2:");
 
         //Write your code here
+        Student student2 = new Student();
+        student2.setName("Bob");
+        student2.setAge(35);
+        student2.setClassAttended("English");
+        student2.setGrade(125.99);
+        student2.setHoursMissed(-23);
+
+
     }
 
 }
