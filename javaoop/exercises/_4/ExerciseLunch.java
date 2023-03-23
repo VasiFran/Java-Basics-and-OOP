@@ -9,12 +9,12 @@ public class ExerciseLunch {
 
     private int numberOfTimesWeHaveGotPrice = 0;
 
-    private ExerciseLunch(Double price, String nameOfDayEaten) {
+    ExerciseLunch(Double price, String nameOfDayEaten) {
         this.price = price;
         this.nameOfDayEaten = nameOfDayEaten;
     }
 
-    public void printMaxPrice() {
+    public static void printMaxPrice() {
         System.out.println(MAX_PRICE);
     }
 
@@ -34,7 +34,7 @@ public class ExerciseLunch {
         }
     }
 
-    private Double getPrice() {
+    Double getPrice() {
         numberOfTimesWeHaveGotPrice = numberOfTimesWeHaveGotPrice + 1;
         return this.price;
     }
@@ -43,11 +43,11 @@ public class ExerciseLunch {
         return this.numberOfTimesWeHaveGotPrice;
     }
 
-    private String getNameOfDayEaten() {
+    String getNameOfDayEaten() {
         return nameOfDayEaten;
     }
 
-    private int getLunchWeightInGrams() {
+    int getLunchWeightInGrams() {
         return lunchWeightInGrams;
     }
 
@@ -59,7 +59,7 @@ public class ExerciseLunch {
         this.nameOfDayEaten = nameOfDayEaten;
     }
 
-    private void setLunchWeightInGrams(int lunchWeightInGrams) {
+    void setLunchWeightInGrams(int lunchWeightInGrams) {
         this.lunchWeightInGrams = lunchWeightInGrams;
     }
 
